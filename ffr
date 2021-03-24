@@ -1,0 +1,23 @@
+	float mas[] = { 12.2, 5,12.22,66,7 };
+	int len = sizeof(mas) / sizeof(mas[0]);
+	for (int x = 0; x < len; x++)
+		printf("%g  ", mas[x]);
+	char mas1[2][5] = { {"jack"}, {"max"} };
+	printf("\n%s - %s\n", mas1[1], mas1[0]);
+	char* masx[2] = { {"jack"}, {"max"} };
+	printf("%s - %s\n", masx[0], masx[1]);
+
+	People pp = { 10,"andry" };
+	printf("\n%d - %s", pp.rost, pp.name);
+	ppeople ap;
+	ap = &pp;
+	ap->rost = 54;
+	ap->name = "Arthas";
+	printf("\n%d - %s", pp.rost, pp.name );
+	printf("\n");
+	People masp[] = { {22, "zol"}, {54, "mingh"},{17, "noth"} };
+	izmenenie(masp + 2, "asfalt", 17);
+	int lenght = sizeof(masp) / sizeof(masp[0]);
+	for (int z = 0; z < lenght; z++) {
+		printf("\n%d - %s", masp[z].rost, masp[z].name);
+	}
